@@ -1,0 +1,26 @@
+{
+  "name": "developerdk-random",
+  "version": "1.0.1",
+  "description": "An npm_module have random files url!",
+  "main": "src/module/module.js",
+  "scripts": {
+    "test": "node . && node src/testings/developerdk.js",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developerdk1973/developerdk-random.git"
+  },
+  "keywords": [
+    "superagent"
+  ],
+  "author": "developerdk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developerdk1973/developerdk-random/issues"
+  },
+  "homepage": "https://github.com/developerdk1973/developerdk-random#readme",
+  "dependencies": {
+    "superagent": "^6.1.0"
+  }
+}
