@@ -14,12 +14,12 @@ async function checkupdate() {
 		return;
 	}
 	await require(`superagent`)
-		.get(`https://registry.npmjs.com/${require(`../package.json`).name}`)
+		.get(`https://registry.npmjs.com/${require(`../../package.json`).name}`)
 		.end((err, response) => {
 			const packagedata = JSON.parse(response.text);
 			if (!packagedata.error && packagedata[`dist-tags`] != undefined) {
 				if (
-					require(`../package.json`).version !== packagedata[`dist-tags`].latest
+					require(`../../package.json`).version !== packagedata[`dist-tags`].latest
 				) {
 					console.log(`\n\n`);
 					console.log(
@@ -28,7 +28,7 @@ async function checkupdate() {
 					console.log(
 						`\x1b[32m` +
 						`| @ ${
-								require(`../package.json`).name
+								require(`../../package.json`).name
 							}                        - [] X |`
 					);
 					console.log(
@@ -43,14 +43,14 @@ async function checkupdate() {
 					);
 					console.log(
 						`\x1b[34m` +
-						`|                  ${require(`../package.json`).version} --> ${
+						`|                  ${require(`../../package.json`).version} --> ${
 								packagedata[`dist-tags`].latest
 							}                |`
 					);
 					console.log(
 						`\x1b[36m` +
 						`|        Run "npm i ${
-								require(`../package.json`).name
+								require(`../../package.json`).name
 							}@latest"       |`
 					);
 					console.log(
@@ -61,7 +61,7 @@ async function checkupdate() {
 					);
 					console.log(
 						`\x1b[31m` +
-						`https://www.npmjs.com/package/${require(`../package.json`).name}`
+						`https://www.npmjs.com/package/${require(`../../package.json`).name}`
 					);
 					console.log(
 						`\x1b[32m` +
