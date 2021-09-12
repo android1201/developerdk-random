@@ -1,14 +1,15 @@
 # developerdk-random
 ## @Author developerdk
-**Version 1.0.0**
 
 >```
 > porngif()
 >```
-**Version 1.0.1**
+**Version 1.0.0**
+
 >```
 > Readme file
 >```
+**Version 1.0.1**
 
 >```
 > const { random } = require('developerdk-random');
