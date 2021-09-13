@@ -7,16 +7,10 @@ const {
 	checkupdate
 } = require('../../src/functions/checkupdate');
 checkupdate();
-const {
-	get
-} = require('http');
-
-const {
-	URL,
-	URLSearchParams
-} = require('url');
 
 const api1_endpoints = require('../../src/json/api1.json');
+
+let api1_baseURL = 'http://192.145.238.5/~pasirm5/v3sca';
 
 /*
  * @Class random
@@ -30,41 +24,20 @@ class random {
 		self.porn = {};
 		self.sex = {};
 		self.animated = {};
-		let baseURL = 'http://192.145.238.5/~pasirm5/v3sca';
 		Object.keys(api1_endpoints.sfw).forEach(async (endpoint) => {
-			self.sfw[endpoint] = async function(queryParams = '') {
-				let url = new URL(`${baseURL}${api1_endpoints.sfw[endpoint]}`);
-				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
-			};
+			self.sfw[endpoint] = `${api1_baseURL}${api1_endpoints.sfw[endpoint]}`;
 		});
 		Object.keys(api1_endpoints.nsfw).forEach(async (endpoint) => {
-			self.nsfw[endpoint] = async function(queryParams = '') {
-				let url = new URL(`${baseURL}${api1_endpoints.nsfw[endpoint]}`);
-				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
-			};
+			self.nsfw[endpoint] = `${api1_baseURL}${api1_endpoints.nsfw[endpoint]}`;
 		});
 		Object.keys(api1_endpoints.porn).forEach(async (endpoint) => {
-			self.porn[endpoint] = async function(queryParams = '') {
-				let url = new URL(`${baseURL}${api1_endpoints.porn[endpoint]}`);
-				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
-			};
+			self.porn[endpoint] = `${api1_baseURL}${api1_endpoints.porn[endpoint]}`;
 		});
 		Object.keys(api1_endpoints.sex).forEach(async (endpoint) => {
-			self.sex[endpoint] = async function(queryParams = '') {
-				let url = new URL(`${baseURL}${api1_endpoints.sex[endpoint]}`);
-				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
-			};
+			self.sex[endpoint] = `${api1_baseURL}${api1_endpoints.sex[endpoint]}`;
 		});
 		Object.keys(api1_endpoints.animated).forEach(async (endpoint) => {
-			self.animated[endpoint] = async function(queryParams = '') {
-				let url = new URL(`${baseURL}${api1_endpoints.animated[endpoint]}`);
-				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
-			};
+			self.animated[endpoint] = `${api1_baseURL}${api1_endpoints.animated[endpoint]}`;
 		});
 	}
 	porngif() {
@@ -77,37 +50,6 @@ class random {
 		this.alreadyPickUp.push(res);
 		return res;
 	}
-}
-/*
- * @Function getContent
- */
-function getContent(url) {
-	return new Promise((resolve, reject) => {
-		get(url, (res) => {
-			const {
-				statusCode
-			} = res;
-			if (statusCode !== 200) {
-				res.resume();
-				reject(`Uh oh, Request failed. ${statusCode}`);
-			}
-			res.setEncoding('utf8');
-			let rawData = '';
-			res.on('data', (chunk) => {
-				rawData += chunk
-			});
-			res.on('end', () => {
-				try {
-					const parsedData = JSON.parse(rawData);
-					resolve(parsedData);
-				} catch (e) {
-					reject(`Error: ${e.message}`);
-				}
-			});
-		}).on('error', (err) => {
-			reject(`Error: ${err.message}`);
-		})
-	});
 }
 /*
  * @Class export
