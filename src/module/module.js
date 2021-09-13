@@ -89,7 +89,7 @@ class random {
 			self.randomimage[endpoint] = async function(queryParams = '') {
 				let url = new URL(`${ri_baseURL}${ri_endpoints[endpoint]}`);
 				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent1(url.toString());
+				return await getContent(url.toString());
 			};
 		});
 	}
