@@ -1,6 +1,6 @@
 {
   "name": "developerdk-random",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An npm_module have random files url!",
   "main": "src/module/module.js",
   "scripts": {
