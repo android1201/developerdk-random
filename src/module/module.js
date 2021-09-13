@@ -25,19 +25,89 @@ class random {
 		self.sex = {};
 		self.animated = {};
 		Object.keys(api1_endpoints.sfw).forEach(async (endpoint) => {
-			self.sfw[endpoint] = `${api1_baseURL}${api1_endpoints.sfw[endpoint]}`;
+			let url = `${api1_baseURL}${api1_endpoints.sfw[endpoint]}`;
+			(async () => {
+				await require(`superagent`)
+					.get(url)
+					.end((err, response) => {
+						let json_data = JSON.parse(response.text);
+						if (json_data.url.length) {
+							self.sfw[endpoint] = json_data.url;
+						}
+						if (!json_data.url.length) {
+							let new_data = JSON.parse('{"error": "api error!"}');
+							self.sfw[endpoint] = new_data;
+						}
+					});
+			})();
 		});
 		Object.keys(api1_endpoints.nsfw).forEach(async (endpoint) => {
-			self.nsfw[endpoint] = `${api1_baseURL}${api1_endpoints.nsfw[endpoint]}`;
+			let url = `${api1_baseURL}${api1_endpoints.nsfw[endpoint]}`;
+			(async () => {
+				await require(`superagent`)
+					.get(url)
+					.end((err, response) => {
+						let json_data = JSON.parse(response.text);
+						if (json_data.url.length) {
+							self.nsfw[endpoint] = json_data.url;
+						}
+						if (!json_data.url.length) {
+							let new_data = JSON.parse('{"error": "api error!"}');
+							self.nsfw[endpoint] = new_data;
+						}
+					});
+			})();
 		});
 		Object.keys(api1_endpoints.porn).forEach(async (endpoint) => {
-			self.porn[endpoint] = `${api1_baseURL}${api1_endpoints.porn[endpoint]}`;
+			let url = `${api1_baseURL}${api1_endpoints.porn[endpoint]}`;
+			(async () => {
+				await require(`superagent`)
+					.get(url)
+					.end((err, response) => {
+						let json_data = JSON.parse(response.text);
+						if (json_data.url.length) {
+							self.porn[endpoint] = json_data.url;
+						}
+						if (!json_data.url.length) {
+							let new_data = JSON.parse('{"error": "api error!"}');
+							self.porn[endpoint] = new_data;
+						}
+					});
+			})();
 		});
 		Object.keys(api1_endpoints.sex).forEach(async (endpoint) => {
-			self.sex[endpoint] = `${api1_baseURL}${api1_endpoints.sex[endpoint]}`;
+			let url = `${api1_baseURL}${api1_endpoints.sex[endpoint]}`;
+			(async () => {
+				await require(`superagent`)
+					.get(url)
+					.end((err, response) => {
+						let json_data = JSON.parse(response.text);
+						if (json_data.url.length) {
+							self.sex[endpoint] = json_data.url;
+						}
+						if (!json_data.url.length) {
+							let new_data = JSON.parse('{"error": "api error!"}');
+							self.sex[endpoint] = new_data;
+						}
+					});
+			})();
 		});
 		Object.keys(api1_endpoints.animated).forEach(async (endpoint) => {
-			self.animated[endpoint] = `${api1_baseURL}${api1_endpoints.animated[endpoint]}`;
+			let url = `${api1_baseURL}${api1_endpoints.animated[endpoint]}`;
+			(async () => {
+				await require(`superagent`)
+					.get(url)
+					.end((err, response) => {
+						let json_data = JSON.parse(response.text);
+						if (json_data.url.length) {
+							self.animated[endpoint] = json_data.url;
+						}
+						if (!json_data.url.length) {
+							let new_data = JSON.parse('{"error": "api error!"}');
+							self.animated[endpoint] = new_data;
+						}
+					});
+			})();
 		});
 	}
 	porngif() {
