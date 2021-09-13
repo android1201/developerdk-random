@@ -97,7 +97,7 @@ class random {
 	}
 	hentai() {
 		redditCabul.hentai().then((res) => {
-			return res.data.url;
+			return this.alreadyPickUp.push(res.data.url);
 		});
 	}
 	ecchi() {
