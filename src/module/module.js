@@ -46,12 +46,15 @@ class random {
 			};
 		});
 		Object.keys(api1_endpoints.porn).forEach(async (endpoint) => {
-			self.porn[endpoint] = async function(queryParams = '') {
-				let url = new URL(`${baseURL}${api1_endpoints.porn[endpoint]}`);
-				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
-			};
+	self.porn[endpoint] = async function(queryParams = '') {
+		let url = new URL(`${baseURL}${api1_endpoints.porn[endpoint]}`);
+		queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+		return new Promise((resolve, reject) => {
+			let mainurl = getContent(url.toString());
+			resolve(mainurl);
 		});
+	};
+});
 		Object.keys(api1_endpoints.sex).forEach(async (endpoint) => {
 			self.sex[endpoint] = async function(queryParams = '') {
 				let url = new URL(`${baseURL}${api1_endpoints.sex[endpoint]}`);
