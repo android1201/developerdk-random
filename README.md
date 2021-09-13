@@ -100,7 +100,7 @@
 
 ```
 (async () => {
-	randomimage.sfw1.smug().then((R_I) => {
+	await randomimage.sfw1.smug().then((R_I) => {
 		console.log(R_I)
 	});
 })();
@@ -108,7 +108,7 @@
 
 ```
 (async () => {
-	randomimage.nsfw1.randomHentaiGif().then((R_I) => {
+	await randomimage.nsfw1.randomHentaiGif().then((R_I) => {
 		console.log(R_I)
 	});
 })();
