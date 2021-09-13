@@ -95,7 +95,6 @@ class random {
 		this.alreadyPickUp.push(res);
 		return res;
 	}
-	randomImage = {
 	hentai() {
 		redditCabul.hentai().then((res) => {
 			return res.data.url;
@@ -410,8 +409,7 @@ class random {
 		redditCabul.lactation().then((res) => {
 			return res.data.url;
 		});
-	}
-};
+	} 
 }
 /*
  * @Function getContent
