@@ -102,3 +102,18 @@
 | `spank` | Gets a NSFW URL of an/a image/gif spank |
 | `gasm` | Gets a NSFW URL of a gasm image |
 
+```
+(async () => {
+	randomimage.sfw1.smug().then((R_I) => {
+		console.log(R_I)
+	});
+})();
+```
+
+```
+(async () => {
+	randomimage.nsfw1.randomHentaiGif().then((R_I) => {
+		console.log(R_I)
+	});
+})();
+```
