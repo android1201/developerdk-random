@@ -12,17 +12,29 @@ for (let i = 0; i < 10; ++i) {
 	console.log(image.porngif());
 }
 
-image.nsfw.blowjob().then((R_I) => {
-	console.log(R_I);
-});
+(async () => {
+	image.nsfw.blowjob().then((R_I) => {
+		console.log(R_I);
+	});
+})();
 
-image.nsfw1.anal().then((R_I) => {
-	console.log(R_I);
-});
+(async () => {
+	image.nsfw1.anal().then((R_I) => {
+		console.log(R_I);
+	});
+})();
 
-image.sfw1.kemonomimi().then((R_I) => {
-	console.log(R_I);
-});
+(async () => {
+	image.sfw1.kemonomimi().then((R_I) => {
+		console.log(R_I);
+	});
+})();
+
+(async () => {
+	image.randomimage.hentai().then((R_I) => {
+		console.log(R_I);
+	});
+})();
 /*
  * @Testing done
  */
