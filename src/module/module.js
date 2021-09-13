@@ -3,6 +3,10 @@
  * @Github developerdk1973
  * @Function checkupdate
  */
+const cabulClient = require('cabul').Client;
+
+const redditCabul = new cabulClient;
+
 const {
 	checkupdate
 } = require('../../src/functions/checkupdate');
@@ -98,6 +102,321 @@ class random {
 		}
 		this.alreadyPickUp.push(res);
 		return res;
+	}
+	hentai() {
+		redditCabul.hentai().then((res) => {
+			return res.data.url;
+		});
+	}
+	ecchi() {
+		redditCabul.ecchi().then((res) => {
+			return res.data.url;
+		});
+	}
+	netorare() {
+		redditCabul.netorare().then((res) => {
+			return res.data.url;
+		});
+	}
+	kemonomimi() {
+		redditCabul.kemonomimi().then((res) => {
+			return res.data.url;
+		});
+	}
+	yuri() {
+		redditCabul.yuri().then((res) => {
+			return res.data.url;
+		});
+	}
+	thicc() {
+		redditCabul.thicc().then((res) => {
+			return res.data.url;
+		});
+	}
+	ahegao() {
+		redditCabul.ahegao().then((res) => {
+			return res.data.url;
+		});
+	}
+	monster() {
+		redditCabul.monster().then((res) => {
+			return res.data.url;
+		});
+	}
+	bondage() {
+		redditCabul.bondage().then((res) => {
+			return res.data.url;
+		});
+	}
+	trap() {
+		redditCabul.trap().then((res) => {
+			return res.data.url;
+		});
+	}
+	pantsu() {
+		redditCabul.pantsu().then((res) => {
+			return res.data.url;
+		});
+	}
+	milf() {
+		redditCabul.milf().then((res) => {
+			return res.data.url;
+		});
+	}
+	zettairyouiki() {
+		redditCabul.zettairyouiki().then((res) => {
+			return res.data.url;
+		});
+	}
+	nekomimi() {
+		redditCabul.nekomimi().then((res) => {
+			return res.data.url;
+		});
+	}
+	paizuri() {
+		redditCabul.paizuri().then((res) => {
+			return res.data.url;
+		});
+	}
+	booty() {
+		redditCabul.booty().then((res) => {
+			return res.data.url;
+		});
+	}
+	waifusgonewild() {
+		redditCabul.waifusgonewild().then((res) => {
+			return res.data.url;
+		});
+	}
+	gameovergirls() {
+		redditCabul.gameovergirls().then((res) => {
+			return res.data.url;
+		});
+	}
+	sukebei() {
+		redditCabul.sukebei().then((res) => {
+			return res.data.url;
+		});
+	}
+	cum() {
+		redditCabul.cum().then((res) => {
+			return res.data.url;
+		});
+	}
+	corruptionhentai() {
+		redditCabul.corruptionhentai().then((res) => {
+			return res.data.url;
+		});
+	}
+	chiisai() {
+		redditCabul.chiisai().then((res) => {
+			return res.data.url;
+		});
+	}
+	muchi() {
+		redditCabul.muchi().then((res) => {
+			return res.data.url;
+		});
+	}
+	tentai() {
+		redditCabul.tentai().then((res) => {
+			return res.data.url;
+		});
+	}
+	dekai() {
+		redditCabul.dekai().then((res) => {
+			return res.data.url;
+		});
+	}
+	yaoi() {
+		redditCabul.yaoi().then((res) => {
+			return res.data.url;
+		});
+	}
+	oral() {
+		redditCabul.oral().then((res) => {
+			return res.data.url;
+		});
+	}
+	armpits() {
+		redditCabul.armpits().then((res) => {
+			return res.data.url;
+		});
+	}
+	bodysuits() {
+		redditCabul.bodysuits().then((res) => {
+			return res.data.url;
+		});
+	}
+	rippedlegwear() {
+		redditCabul.rippedlegwear().then((res) => {
+			return res.data.url;
+		});
+	}
+	atago() {
+		redditCabul.atago().then((res) => {
+			return res.data.url;
+		});
+	}
+	handbras() {
+		redditCabul.handbras().then((res) => {
+			return res.data.url;
+		});
+	}
+	elf() {
+		redditCabul.elf().then((res) => {
+			return res.data.url;
+		});
+	}
+	ecchibondage() {
+		redditCabul.ecchibondage().then((res) => {
+			return res.data.url;
+		});
+	}
+	cleavage() {
+		redditCabul.cleavage().then((res) => {
+			return res.data.url;
+		});
+	}
+	kanmusunights() {
+		redditCabul.kanmusunights().then((res) => {
+			return res.data.url;
+		});
+	}
+	twob() {
+		redditCabul.twob().then((res) => {
+			return res.data.url;
+		});
+	}
+	overwatch() {
+		redditCabul.overwatch().then((res) => {
+			return res.data.url;
+		});
+	}
+	arknuts() {
+		redditCabul.arknuts().then((res) => {
+			return res.data.url;
+		});
+	}
+	lol() {
+		redditCabul.lol().then((res) => {
+			return res.data.url;
+		});
+	}
+	ai() {
+		redditCabul.ai().then((res) => {
+			return res.data.url;
+		});
+	}
+	western() {
+		redditCabul.western().then((res) => {
+			return res.data.url;
+		});
+	}
+	pokeporn() {
+		redditCabul.pokeporn().then((res) => {
+			return res.data.url;
+		});
+	}
+	rule34() {
+		redditCabul.rule34().then((res) => {
+			return res.data.url;
+		});
+	}
+	officelady() {
+		redditCabul.officelady().then((res) => {
+			return res.data.url;
+		});
+	}
+	dtittytouching() {
+		redditCabul.dtittytouching().then((res) => {
+			return res.data.url;
+		});
+	}
+	inumimi() {
+		redditCabul.inumimi().then((res) => {
+			return res.data.url;
+		});
+	}
+	cumsluts() {
+		redditCabul.cumsluts().then((res) => {
+			return res.data.url;
+		});
+	}
+	heterochromia() {
+		redditCabul.heterochromia().then((res) => {
+			return res.data.url;
+		});
+	}
+	bisex() {
+		redditCabul.bisex().then((res) => {
+			return res.data.url;
+		});
+	}
+	smothering() {
+		redditCabul.smothering().then((res) => {
+			return res.data.url;
+		});
+	}
+	vacuum() {
+		redditCabul.vacuum().then((res) => {
+			return res.data.url;
+		});
+	}
+	humiliation() {
+		redditCabul.humiliation().then((res) => {
+			return res.data.url;
+		});
+	}
+	forniphilia() {
+		redditCabul.forniphilia().then((res) => {
+			return res.data.url;
+		});
+	}
+	hearts() {
+		redditCabul.hearts().then((res) => {
+			return res.data.url;
+		});
+	}
+	feet() {
+		redditCabul.feet().then((res) => {
+			return res.data.url;
+		});
+	}
+	lewd() {
+		redditCabul.lewd().then((res) => {
+			return res.data.url;
+		});
+	}
+	taihou() {
+		redditCabul.taihou().then((res) => {
+			return res.data.url;
+		});
+	}
+	christmascake() {
+		redditCabul.christmascake().then((res) => {
+			return res.data.url;
+		});
+	}
+	rikka() {
+		redditCabul.rikka().then((res) => {
+			return res.data.url;
+		});
+	}
+	maid() {
+		redditCabul.maid().then((res) => {
+			return res.data.url;
+		});
+	}
+	usagi() {
+		redditCabul.usagi().then((res) => {
+			return res.data.url;
+		});
+	}
+	lactation() {
+		redditCabul.lactation().then((res) => {
+			return res.data.url;
+		});
 	}
 }
 /*
