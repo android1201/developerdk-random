@@ -5,10 +5,10 @@
 > porngif()
 >```
 
-```
+>```
 > const { random } = require('developerdk-random');
 > const randomimage = new random();
-```
+>```
 **Package installation!**
 
 ```
@@ -16,12 +16,12 @@
 ```
 **Return 1 random image!**
 
->```
+```
  let images = 10;
  for (let i = 0; i < images; ++i) {
  	console.log(randomimage.porngif());
  }
->```
+```
 **Return 10 random images!**
 
 ### sfw1
