@@ -7,6 +7,9 @@ const {
 	checkupdate
 } = require('../../src/functions/checkupdate');
 checkupdate();
+const {get} = require('http');
+const {URL, URLSearchParams} = require('url');
+const api1_endpoints = require('../../src/json/api1.json');
 /*
  * @Class random
  */
