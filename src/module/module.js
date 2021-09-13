@@ -78,14 +78,14 @@ class random {
 			self.sfw1[endpoint] = async function(queryParams = '') {
 				let url = new URL(`${api2_baseURL}${api2_endpoints.sfw[endpoint]}`);
 				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
+				return await getContent1(url.toString());
 			};
 		});
 		Object.keys(api2_endpoints.nsfw).forEach(async (endpoint) => {
 			self.nsfw1[endpoint] = async function(queryParams = '') {
 				let url = new URL(`${api2_baseURL}${api2_endpoints.nsfw[endpoint]}`);
 				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
-				return await getContent(url.toString());
+				return await getContent1(url.toString());
 			};
 		});
 	}
@@ -112,6 +112,37 @@ function getContent(url) {
 			if (statusCode !== 200) {
 				res.resume();
 				reject(`Uh oh, Request failed. ${statusCode}`);
+			}
+			res.setEncoding('utf8');
+			let rawData = '';
+			res.on('data', (chunk) => {
+				rawData += chunk
+			});
+			res.on('end', () => {
+				try {
+					const parsedData = JSON.parse(rawData);
+					resolve(parsedData);
+				} catch (e) {
+					reject(`Error: ${e.message}`);
+				}
+			});
+		}).on('error', (err) => {
+			reject(`Error: ${err.message}`);
+		})
+	});
+}
+/*
+ * @Function getContent1
+ */
+function getContent1(url) {
+	return new Promise((resolve, reject) => {
+		require('https').get(url, (res) => {
+			const {
+				statusCode
+			} = res;
+			if (statusCode !== 200) {
+				res.resume();
+				reject(`Request failed. Status code: ${statusCode}`);
 			}
 			res.setEncoding('utf8');
 			let rawData = '';
