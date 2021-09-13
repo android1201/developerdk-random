@@ -375,6 +375,58 @@
 | `yoga_pants` | /porn/?tags=yoga-pants |  
 ----
 
+### animated
+| `blowjob` ||
+| `missionary` ||
+| `cowgirl` ||
+| `doggy_style` ||
+----
+
+```
+(async () => {
+	await randomimage.sfw.anews().then((R_I) => {
+		console.log(R_I)
+	});
+})();
+```
+----
+
+```
+(async () => {
+	await randomimage.nsfw.dido().then((R_I) => {
+		console.log(R_I)
+	});
+})();
+```
+----
+
+```
+(async () => {
+	await randomimage.sex.anal().then((R_I) => {
+		console.log(R_I)
+	});
+})();
+```
+----
+
+```
+(async () => {
+	await randomimage.porn.ass().then((R_I) => {
+		console.log(R_I)
+	});
+})();
+```
+----
+
+```
+(async () => {
+	await randomimage.animated.blowjob().then((R_I) => {
+		console.log(R_I)
+	});
+})();
+```
+----
+
 ### sfw1
 
 | Function | Description |
