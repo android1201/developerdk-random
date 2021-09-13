@@ -85,8 +85,7 @@ class random {
 				return await getContent1(url.toString());
 			};
 		});
-	}
-	Object.keys(ri_endpoints).forEach(async (endpoint) => {
+		Object.keys(ri_endpoints).forEach(async (endpoint) => {
 			self.randomimage[endpoint] = async function(queryParams = '') {
 				let url = new URL(`${ri_baseURL}${ri_endpoints[endpoint]}`);
 				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
