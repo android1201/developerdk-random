@@ -376,10 +376,12 @@
 ----
 
 ### animated
-| `blowjob` ||
-| `missionary` ||
-| `cowgirl` ||
-| `doggy_style` ||
+| Function | Params |
+| -------- | ----------- |
+| `blowjob` | /nsfw/animated/?tags=blowjob |
+| `missionary` | /nsfw/animated/?tags=missionary |
+| `cowgirl` | /nsfw/animated/?tags=cowgirl |
+| `doggy_style` | /nsfw/animated/?tags=doggy%20style |
 ----
 
 ```
