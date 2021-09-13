@@ -361,3 +361,12 @@
 })();
 ```
 ----
+
+```
+(async () => {
+	image.randomimage.hentai().then((R_I) => {
+		console.log(R_I);
+	});
+})();
+```
+----
