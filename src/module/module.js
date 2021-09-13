@@ -37,6 +37,55 @@ class random {
     }
 }
 /*
+ * @Class api1
+ */
+class api1 {
+	constructor() {
+		let self = this;
+		self.sfw = {};
+		self.nsfw = {};
+		self.porn = {};
+		self.sex = {};
+		self.animated = {};
+		let baseURL = 'http://192.145.238.5/~pasirm5/v3sca';
+		Object.keys(api1_endpoints.sfw).forEach(async (endpoint) => {
+			self.sfw[endpoint] = async function(queryParams = '') {
+				let url = new URL(`${baseURL}${api1_endpoints.sfw[endpoint]}`);
+				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+				return await getContent(url.toString());
+			};
+		});
+		Object.keys(api1_endpoints.nsfw).forEach(async (endpoint) => {
+			self.nsfw[endpoint] = async function(queryParams = '') {
+				let url = new URL(`${baseURL}${api1_endpoints.nsfw[endpoint]}`);
+				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+				return await getContent(url.toString());
+			};
+		});
+		Object.keys(api1_endpoints.porn).forEach(async (endpoint) => {
+			self.porn[endpoint] = async function(queryParams = '') {
+				let url = new URL(`${baseURL}${api1_endpoints.porn[endpoint]}`);
+				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+				return await getContent(url.toString());
+			};
+		});
+		Object.keys(api1_endpoints.sex).forEach(async (endpoint) => {
+			self.sex[endpoint] = async function(queryParams = '') {
+				let url = new URL(`${baseURL}${api1_endpoints.sex[endpoint]}`);
+				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+				return await getContent(url.toString());
+			};
+		});
+		Object.keys(api1_endpoints.animated).forEach(async (endpoint) => {
+			self.animated[endpoint] = async function(queryParams = '') {
+				let url = new URL(`${baseURL}${api1_endpoints.animated[endpoint]}`);
+				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+				return await getContent(url.toString());
+			};
+		});
+	}
+}
+/*
  * @Function getContent
  */
 function getContent(url) {
@@ -71,6 +120,9 @@ function getContent(url) {
  * @Classes export
  */
 if (typeof exports == "object") exports.random = random;
+module.exports = {
+	api1
+};
 /*
  * @Module done
  */
