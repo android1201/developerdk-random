@@ -37,7 +37,38 @@ class random {
     }
 }
 /*
- * @Class export
+ * @Function getContent
+ */
+function getContent(url) {
+	return new Promise((resolve, reject) => {
+		get(url, (res) => {
+			const {
+				statusCode
+			} = res;
+			if (statusCode !== 200) {
+				res.resume();
+				reject(`Uh oh, Request failed. ${statusCode}`);
+			}
+			res.setEncoding('utf8');
+			let rawData = '';
+			res.on('data', (chunk) => {
+				rawData += chunk
+			});
+			res.on('end', () => {
+				try {
+					const parsedData = JSON.parse(rawData);
+					resolve(parsedData);
+				} catch (e) {
+					reject(`Error: ${e.message}`);
+				}
+			});
+		}).on('error', (err) => {
+			reject(`Error: ${err.message}`);
+		})
+	});
+}
+/*
+ * @Classes export
  */
 if (typeof exports == "object") exports.random = random;
 /*
