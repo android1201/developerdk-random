@@ -95,7 +95,7 @@ class random {
 		this.alreadyPickUp.push(res);
 		return res;
 	}
-	self.image = {
+	randomImage = {
 	hentai() {
 		redditCabul.hentai().then((res) => {
 			return res.data.url;
