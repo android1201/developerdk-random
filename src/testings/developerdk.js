@@ -12,7 +12,7 @@ for (let i = 0; i < 10; ++i) {
 	console.log(image.porngif());
 }
 image.nsfw.blowjob().then((R_I) => {
-  console.log(R_I);
+	console.log(R_I);
 });
 /*
  * @Testing done
