@@ -4,12 +4,6 @@
 >```
 > porngif()
 >```
-**Version 1.0.0**
-
->```
-> Readme file
->```
-**Version 1.0.1**
 
 >```
 > const { random } = require('developerdk-random');
