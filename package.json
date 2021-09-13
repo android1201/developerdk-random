@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/developerdk1973/developerdk-random#readme",
   "dependencies": {
-    "cabul": "0.0.15",
     "superagent": "^6.1.0"
   }
 }
