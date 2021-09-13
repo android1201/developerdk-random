@@ -2,10 +2,6 @@
 ## @Author developerdk
 
 >```
-> porngif()
->```
-
->```
 > const { random } = require('developerdk-random');
 > const randomimage = new random();
 >```
