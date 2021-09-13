@@ -33,7 +33,9 @@ class random {
 		this.alreadyPickUp = [];
 		let self = this;
 		self.sfw = {};
+		self.sfw1 = {};
 		self.nsfw = {};
+		self.nsfw1 = {};
 		self.porn = {};
 		self.sex = {};
 		self.animated = {};
@@ -68,6 +70,20 @@ class random {
 		Object.keys(api1_endpoints.animated).forEach(async (endpoint) => {
 			self.animated[endpoint] = async function(queryParams = '') {
 				let url = new URL(`${api1_baseURL}${api1_endpoints.animated[endpoint]}`);
+				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+				return await getContent(url.toString());
+			};
+		});
+		Object.keys(api2_endpoints.sfw).forEach(async (endpoint) => {
+			self.sfw1[endpoint] = async function(queryParams = '') {
+				let url = new URL(`${api2_baseURL}${api2_endpoints.sfw[endpoint]}`);
+				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
+				return await getContent(url.toString());
+			};
+		});
+		Object.keys(api2_endpoints.nsfw).forEach(async (endpoint) => {
+			self.nsfw1[endpoint] = async function(queryParams = '') {
+				let url = new URL(`${api2_baseURL}${api2_endpoints.nsfw[endpoint]}`);
 				queryParams !== '' ? url.search = new URLSearchParams(queryParams) : '';
 				return await getContent(url.toString());
 			};
