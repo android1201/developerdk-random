@@ -21,7 +21,7 @@ const api1_endpoints = require('../../src/json/api1.json');
 
 const api2_endpoints = require('../../src/json/api2.json');
 
-let api1_baseURL = 'http://192.145.238.5/~pasirm5/v3sca';
+let api1_baseURL = 'http://192.145.238.5/~pasirm5/v3sca'; // 'https://scathach.redsplit.org/v3';
 
 let api2_baseURL = 'https://nekos.life/api/v2';
 
