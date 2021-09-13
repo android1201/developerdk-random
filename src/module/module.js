@@ -40,7 +40,6 @@ class random {
 		self.sfw1 = {};
 		self.nsfw = {};
 		self.nsfw1 = {};
-		self.porn = {};
 		self.sex = {};
 		self.animated = {};
 		Object.keys(api1_endpoints.sfw).forEach(async (endpoint) => {
