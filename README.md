@@ -364,7 +364,7 @@
 
 ### randomimage
 
-| Function | Description |
+| Function | Params |
 | -------- | ----------- |
 | `ecchi` | /?ecchi |
 | `yuri` | /?yuri |
