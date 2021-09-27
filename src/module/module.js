@@ -94,7 +94,7 @@ class random {
 		});
 	}
 	porngif() {
-		const hub = require('../../src/json/randomhubimagesurl.json');
+		const hub = require('../../src/json/randomhubimagesurl.json').database;
 		let res = null;
 		if (this.alreadyPickUp.length == hub.length) this.alreadyPickUp = [];
 		while (res == null || this.alreadyPickUp.includes(res)) {
