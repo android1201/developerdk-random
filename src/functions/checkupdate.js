@@ -10,11 +10,16 @@ module.exports = {
  * @Function checkupdate
  */
 async function checkupdate() {
-	if (!require(`superagent`)) {
+	const {
+		get
+	} = require(`superagent`);
+
+	const superagent = require(`superagent`);
+
+	if (!superagent) {
 		return;
 	}
-	await require(`superagent`)
-		.get(`https://registry.npmjs.com/${require(`../../package.json`).name}`)
+	await get(`https://registry.npmjs.com/${require(`../../package.json`).name}`)
 		.end((err, response) => {
 			const packagedata = JSON.parse(response.text);
 			if (!packagedata.error && packagedata[`dist-tags`] != undefined) {
